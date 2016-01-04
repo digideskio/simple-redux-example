@@ -4,7 +4,7 @@
   "description": "Very small example of how Redux works",
   "main": "index.js",
   "scripts": {
-    "test": "babel-tape-runner **/*-spec.js",
+    "test": "babel-tape-runner test/*.js | faucet",
     "build": "webpack -vpc --progress --config webpack.config.js",
     "start": "npm run build && node dist/bundle.js"
   },
