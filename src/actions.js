@@ -1,3 +1,4 @@
+// http://rackt.org/redux/docs/basics/Actions.html
 // actionTypes
 export const CHANGE_BRUSH_COLOR = 'CHANGE_BRUSH_COLOR';
 export const CHANGE_BRUSH_SIZE = 'CHANGE_BRUSH_SIZE';

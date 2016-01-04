@@ -35,7 +35,9 @@ export default function reducer(state = defaultState, action) {
 // And if there were more than one reducer, export them all as 
 // a unified reducer.
 //
-// export const reducers = combineReducers({
+// const reducers = combineReducers({
 //   reducerOne,
 //   reducerTwo
 // });
+//
+// export default reducers;
