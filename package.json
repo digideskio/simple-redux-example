@@ -1,0 +1,22 @@
+{
+  "name": "simple-redux-example",
+  "version": "1.0.0",
+  "description": "Very small example of how Redux works",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel-tape-runner **/*-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonmendes/simple-redux-example.git"
+  },
+  "keywords": [
+    "redux"
+  ],
+  "author": "Jason Mendes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonmendes/simple-redux-example/issues"
+  },
+  "homepage": "https://github.com/jasonmendes/simple-redux-example#readme"
+}
