@@ -16,7 +16,7 @@
 import { CHANGE_BRUSH_COLOR, CHANGE_BRUSH_SIZE } from './actions';
 
 // define the default state
-const defaultState = {
+export const defaultState = {
   brushColor: '#ea3370',
   brushSize: 70
 };
