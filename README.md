@@ -4,7 +4,7 @@ Perhaps this could even be called _Simplest_ Redux Example :)
 
 After I wrapped my brain around Redux, I wanted to make the most minimal working example for both my own learning and hopefully to benefit others. 
 
-## Build && test || start 
+## build && test || start 
 
 * `npm run build` -- webpack build
 * `npm start` -- Do the thing.
