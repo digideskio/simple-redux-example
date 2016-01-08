@@ -6,9 +6,9 @@ After I wrapped my brain around Redux, I wanted to make the most minimal working
 
 ## build && test || start 
 
-* `npm run build` -- webpack build
-* `npm start` -- Do the thing.
-* `npm test` -- Well, run the tests.
+* `npm run build` -- Webpack build
+* `npm start` -- Do the thing
+* `npm test:tape` or `npm test:mocha` depending on your favorite flavor (though they don't yet quite test in the exact same way.. coming soon).
 
 After `git clone`ing the project and `npm install`ing, you can run `npm run build` to have webpack glue the ESNext into a single bundle that Node can natively run. Then you can either run `npm test` or `npm start`. The former runs `tests/index.js` and the latter runs the globbed file. 
 
