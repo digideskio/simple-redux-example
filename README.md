@@ -24,7 +24,7 @@ For an even simpler version you could do it all in one file, but I wanted to pre
 
 Defines the `actionTypes` and the `actionCreators` -- http://rackt.org/redux/docs/basics/Actions.html
 
-```
+```javascript
 // actionTypes
 export const CHANGE_BRUSH_COLOR = 'CHANGE_BRUSH_COLOR';
 export const CHANGE_BRUSH_SIZE = 'CHANGE_BRUSH_SIZE';
@@ -43,7 +43,7 @@ export function changeBrushSize(size) {
 
 Reducers (or just one reducer) specifies how the the application's state changes in response to an action. -- http://rackt.org/redux/docs/basics/Reducers.html
 
-```
+```javascript
 // import the actionTypes
 import { CHANGE_BRUSH_COLOR, CHANGE_BRUSH_SIZE } from './actions';
 
@@ -69,7 +69,7 @@ export default function reducer(state = defaultState, action) {
 
 The so called Single Source of Truth, the store holds the application state. -- http://rackt.org/redux/docs/basics/Store.html 
 
-```
+```javascript
 import { createStore } from 'redux';
 import reducer from './reducers';
 
@@ -82,7 +82,7 @@ export default store;
 
 Bring it all together.
 
-```
+```javascript
 import store from './store';
 import { changeBrushColor, changeBrushSize } from './actions';
 
