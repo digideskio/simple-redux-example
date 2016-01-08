@@ -1,7 +1,7 @@
 import test from 'tape';
-import store from '../src/store';
-import { changeBrushColor, changeBrushSize } from '../src/actions';
-import { defaultState } from '../src/reducers';
+import store from '../../src/store';
+import { changeBrushColor, changeBrushSize } from '../../src/actions';
+import { defaultState } from '../../src/reducers';
 
 test('Store returns default state when an unknown action is dispatched', t => {
   t.plan(1);
