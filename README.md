@@ -20,16 +20,78 @@ For an even simpler version you could do it all in one file, but I wanted to pre
 
 #### `src/`
 
-```
-// Coming soon..
-```
-
 ##### `actions.js`
+
+Defines the `actionTypes` and the `actionCreators` -- http://rackt.org/redux/docs/basics/Actions.html
+
+```
+// actionTypes
+export const CHANGE_BRUSH_COLOR = 'CHANGE_BRUSH_COLOR';
+export const CHANGE_BRUSH_SIZE = 'CHANGE_BRUSH_SIZE';
+
+// actionCreators
+export function changeBrushColor(color) {
+  return { type: CHANGE_BRUSH_COLOR, color };
+}
+
+export function changeBrushSize(size) {
+  return { type: CHANGE_BRUSH_SIZE, size };
+}
+```
 
 ##### `reducers.js`
 
+Reducers (or just one reducer) specifies how the the application's state changes in response to an action. -- http://rackt.org/redux/docs/basics/Reducers.html
+
+```
+// import the actionTypes
+import { CHANGE_BRUSH_COLOR, CHANGE_BRUSH_SIZE } from './actions';
+
+// define the default state
+export const defaultState = {
+  brushColor: '#ea3370',
+  brushSize: 70
+};
+
+export default function reducer(state = defaultState, action) {
+  switch (action.type) {
+    case CHANGE_BRUSH_COLOR:
+      return Object.assign({}, state, { brushColor: action.color });
+    case CHANGE_BRUSH_SIZE:
+      return Object.assign({}, state, { brushSize: action.size });
+    default:
+      return state;
+  }
+}
+```
+
 ##### `store.js`
+
+The so called Single Source of Truth, the store holds the application state. -- http://rackt.org/redux/docs/basics/Store.html 
+
+```
+import { createStore } from 'redux';
+import reducer from './reducers';
+
+let store = createStore(reducer);
+
+export default store;
+```
 
 ##### `index.js`
 
-#### `tests/index.js`
+Bring it all together.
+
+```
+import store from './store';
+import { changeBrushColor, changeBrushSize } from './actions';
+
+// Show the default/initial state
+console.log('default state => ', store.getState());
+
+// Dispatch some actions and see how the state has changed
+store.dispatch(changeBrushColor('#efe742'));
+console.log('change brush color => ', store.getState());
+store.dispatch(changeBrushSize(200));
+console.log('change brush size => ', store.getState());
+```
