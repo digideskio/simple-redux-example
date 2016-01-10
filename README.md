@@ -98,4 +98,4 @@ console.log('change brush size => ', store.getState());
 
 #### `test/`
 
-Redux documentation recommends Mocha so `npm run test:mocha` runs the tests in `test/mocha/`. I enjoy the simplicity and directness of using `tape` for tests, so I've also written tests using that (`npm run test:tape` points to `test/tape/`).
+[Redux documentation recommends Mocha](http://rackt.org/redux/docs/recipes/WritingTests.html) so `npm run test:mocha` runs the tests in `test/mocha/`. I enjoy the simplicity and directness of using `tape` for tests, so I've also written tests using that (`npm run test:tape` points to `test/tape/`).
